@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import { connectDB } from './config/connectDb.mjs'
+import { addImage } from './routes/add-image.mjs'
 
 dotenv.config()
 
@@ -12,6 +13,8 @@ connectDB()
 
 app.use(cors())
 app.options('*', cors())
+
+app.use('/', addImage)
 
 const PORT = process.env.PORT || 5001
 
