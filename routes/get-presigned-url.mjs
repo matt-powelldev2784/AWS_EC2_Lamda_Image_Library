@@ -4,7 +4,7 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { randomBytes } from 'crypto'
 
 const generateImageId = () => {
-  return randomBytes(16).toString('hex')
+  return Date.now().toString() + randomBytes(16).toString('hex')
 }
 const router = Router()
 
@@ -29,7 +29,6 @@ export const getPresignedUrl = router.get(
       const url = await getSignedUrl(client, addImagecCommand, {
         expiresIn: 60 * 60,
       })
-      console.log('url', url)
 
       res.status(200).json({
         success: true,

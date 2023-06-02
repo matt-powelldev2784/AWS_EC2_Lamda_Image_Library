@@ -8,13 +8,6 @@ export const addImage = router.post(
   async (req, res) => {
     try {
       const { path, uploadedBy, description, tags } = req.body
-      console.log(
-        'path, uploadedBy, description, tags',
-        path,
-        uploadedBy,
-        description,
-        tags
-      )
 
       if (!path || !uploadedBy || !description || !tags) {
         return res.status(400).json({
