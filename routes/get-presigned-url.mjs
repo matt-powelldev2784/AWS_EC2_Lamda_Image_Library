@@ -1,7 +1,11 @@
 import { Router } from 'express'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
+import { randomBytes } from 'crypto'
 
+const generateImageId = () => {
+  return randomBytes(16).toString('hex')
+}
 const router = Router()
 
 export const getPresignedUrl = router.get(
@@ -18,7 +22,7 @@ export const getPresignedUrl = router.get(
 
       const addImageParams = {
         Bucket: process.env.AWS_BUCKET_NAME,
-        Key: 'test.jpg',
+        Key: generateImageId(),
       }
 
       const addImagecCommand = new PutObjectCommand(addImageParams)
