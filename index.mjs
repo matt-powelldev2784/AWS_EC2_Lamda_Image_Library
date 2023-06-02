@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import { connectDB } from './config/connectDb.mjs'
 import { addImage } from './routes/add-image-details-to-db.mjs'
 import { getPresignedUrl } from './routes/get-presigned-url.mjs'
+import { searchImages } from './routes/search-images.mjs'
 
 dotenv.config()
 
@@ -17,6 +18,7 @@ app.options('*', cors())
 
 app.use('/', addImage)
 app.use('/', getPresignedUrl)
+app.use('/', searchImages)
 
 const PORT = process.env.PORT || 5001
 
