@@ -73,8 +73,8 @@ The image search will return the following json: {
  "status": 200,  
  "msg": "Images found",  
  "data": {  
- "images": [] <span style="color: red;">**// An array of image details including
-image path**</span>  
+ "images": [] <span style="color: red">**// An array of image details including image
+path**</span>  
  "total": 26, **// The total number of images found**  
  "returned": 12 **// The number of images return will always be 12**  
  }  
