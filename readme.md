@@ -28,7 +28,7 @@ path: ImageUrl // this should contain the imageUrl returned from
 /get-presigned-url  
 uploadedBy: 'name', // the name of the person uploading  
 description: 'A man on the moon', // a description of the image  
-tags: [ "moon", "man" ] // an array of string which the image can be searched
+tags: [ "moon", "man" ] // an array of strings which the image can be searched
 against.  
 }
 
