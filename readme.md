@@ -24,12 +24,12 @@ http://18.134.11.162:5001/add-image-details-to-db
 
 The body of the post request should be json in the following format:  
 {  
-path: ImageUrl // this should contain the imageUrl returned from
+path: ImageUrl **// this should contain the imageUrl returned from**
 /get-presigned-url  
-uploadedBy: 'name', // the name of the person uploading  
-description: 'A man on the moon', // a description of the image  
-tags: [ "moon", "man" ] // an array of strings which the image can be searched
-against.  
+uploadedBy: 'name', **// the name of the person uploading**  
+description: 'A man on the moon', **// a description of the image**  
+tags: [ "moon", "man" ] **// an array of strings which the image can be**
+**searched against.**  
 }
 
 ## Image Search
@@ -73,8 +73,8 @@ The image search will return the following json: {
  "status": 200,  
  "msg": "Images found",  
  "data": {  
- "images": [] // An array of image details including image path  
- "total": 26, // The total number of images found  
- "returned": 12 // The number of images return will always be 12  
+ "images": [] **// An array of image details including image path** "total": 26,
+**// The total number of images found**  
+ "returned": 12 **// The number of images return will always be 12**  
  }  
  }
