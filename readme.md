@@ -25,7 +25,7 @@ http://18.134.11.162:5001/add-image-details-to-db
 The body of the post request should be json in the following format:  
 {  
 path: ImageUrl **// this should contain the imageUrl returned from**
-/get-presigned-url  
+**/get-presigned-url**  
 uploadedBy: 'name', **// the name of the person uploading**  
 description: 'A man on the moon', **// a description of the image**  
 tags: [ "moon", "man" ] **// an array of strings which the image can be**
