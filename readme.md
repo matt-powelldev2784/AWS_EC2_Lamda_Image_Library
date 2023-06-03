@@ -4,7 +4,7 @@ Node JS API Server built to enable a front end to serve an image library.
 Images are hosted in an AWS S3 Bucket.  
 The node server is hosted in an AWS EC2 Instance.
 
-Presigned URLs are provided to upload the images direct to AWS which minimises.
+Presigned URLs are provided to upload the images direct to AWS which minimises
 the load on the Node Server.
 
 ## Get Presigned URL To Upload Image
