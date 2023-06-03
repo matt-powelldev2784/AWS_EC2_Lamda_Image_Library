@@ -60,7 +60,7 @@ amount of images returned:
 Add the query parameter limit=number  
 i.e. http://18.134.11.162:5001/search-images?tags=cat&tags=hat&limit=2
 
-#### Specify The Page Of Image Returned
+#### Specify The Page Of Images Returned
 
 To specify the page of images you wany to return: Add the query parameter
 page=number  
