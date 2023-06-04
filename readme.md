@@ -1,4 +1,4 @@
-# NodeJs Image Library Server Hosted On AWS EC2, Images Stored In AWS S3 Bucket
+# NodeJs Image Library Server
 
 Node JS API Server built to enable a front end to serve an image library.  
 Images are hosted in an AWS S3 Bucket.  
