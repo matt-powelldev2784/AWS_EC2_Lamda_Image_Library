@@ -4,10 +4,10 @@ Node JS API Server built to enable a front end to serve an image library.
 Images are hosted in an AWS S3 Bucket.  
 The node server is hosted in an AWS EC2 Instance.
 
-Secure pre-signed URL's are provided to upload the images directly to AWS S3 which
-minimises the load on the Node Server.
+Secure pre-signed URL's are provided to upload the images directly to AWS S3
+which minimises the load on the Node Server.
 
-## Get Presigned URL To Upload Image
+## How To Get Presigned URL For Upload Image
 
 Perform a get request to:  
 http://18.134.11.162:5001/get-presigned-url
@@ -17,7 +17,7 @@ image in the database.
 The imageUrl should be used to define the path parameter when adding the image
 to the database on the front end.
 
-## Add Image To Database
+## How To Add Image To Database
 
 Perform a post request to:  
 http://18.134.11.162:5001/add-image-details-to-db
@@ -32,7 +32,7 @@ tags: [ "moon", "man" ] **// an array of strings which the images can be**
 **searched against.**  
 }
 
-## Image Search
+## How To Performn Image Search
 
 #### All Images
 
