@@ -1,11 +1,11 @@
-# AWS Image Hosting Server
+# NodeJS AWS Image Hosting Server
 
 Node JS API Server built to enable a front end to serve an image library.  
 Images are hosted in an AWS S3 Bucket.  
 The node server is hosted in an AWS EC2 Instance.
 
-Presigned URLs are provided to upload the images direct to AWS which minimises
-the load on the Node Server.
+Secure pre-signed URL's are provided to upload the images directly to AWS S3 which
+minimises the load on the Node Server.
 
 ## Get Presigned URL To Upload Image
 
@@ -28,7 +28,7 @@ path: ImageUrl **// this should contain the imageUrl returned from**
 **/get-presigned-url**  
 uploadedBy: 'name', **// the name of the person uploading**  
 description: 'A man on the moon', **// a description of the image**  
-tags: [ "moon", "man" ] **// an array of strings which the image can be**
+tags: [ "moon", "man" ] **// an array of strings which the images can be**
 **searched against.**  
 }
 
