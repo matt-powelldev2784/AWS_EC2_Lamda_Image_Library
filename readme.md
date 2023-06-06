@@ -82,7 +82,7 @@ The image search will return the following json: {
 
 Each image in the image array will return the following JSON:  
  {  
- \_id: "647f1ac5356fc98a938dcaf7",  
+ \_id: "imageIdHash",  
  "path": "https://aws.s3/imageName",  
  "thumbnailPath": "https://aws.s3/imageName-thumbnail",  
  "uploadedBy": "name",  
