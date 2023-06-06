@@ -2,7 +2,8 @@
 
 Node JS API Server built to enable a front end to serve an image library.  
 Images are hosted in an AWS S3 Bucket.  
-The node server is hosted in an AWS EC2 Instance.
+The node server is hosted in an AWS EC2 Instance.  
+It uses an AWS Lamda function to generate image thumbnails.
 
 Secure pre-signed URL's are provided to upload the images directly to AWS S3
 which minimises the load on the Node Server.
@@ -69,12 +70,22 @@ i.e http://18.134.11.162:5001/search-images?tags=cat&tags=hat&page=3
 #### API Return Format
 
 The image search will return the following json: {  
- "success": true,  
- "status": 200,  
- "msg": "Images found",  
- "data": {  
- "images": [] **// An array of image details including image path**  
- "total": 26, **// The total number of images found**  
- "returned": 12 **// The number of images return will always be 12**  
+ success: true,  
+ status: 200,  
+ msg: "Images found",  
+ data: {  
+ images: [] **// An array of image details including image path**  
+ total: 26, **// The total number of images found**  
+ returned: 12 **// The number of images return will always be 12**  
  }  
+ }
+
+Each image in the image array will return the following JSON:  
+ {  
+ \_id: "647f1ac5356fc98a938dcaf7",  
+ "path": "https://aws.s3/imageName",  
+ "thumbnailPath": "https://aws.s3/imageName-thumbnail",  
+ "uploadedBy": "name",  
+ "description": "man on the moon",  
+ "tags": [ "moon", "man" ],  
  }
