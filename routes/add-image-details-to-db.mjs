@@ -1,20 +1,8 @@
 import { Router } from 'express'
 import { Image } from '../models/Image.mjs'
+import { getThumbnailPath } from '../lib/getThumbnailPath.mjs'
 
 const router = Router()
-
-const getThumbnailPath = (path) => {
-  const thumbnailPathArray = path.split('/')
-
-  thumbnailPathArray[2] =
-    'mattpowell2784-aws-image-hosting-thumbnails.s3.eu-west-2.amazonaws.com'
-  
-  thumbnailPathArray[3] = `${thumbnailPathArray[3]}-thumbnail`
-
-  const thumbnailPath = thumbnailPathArray.join('/')
-
-  return thumbnailPath
-}
 
 export const addImage = router.post(
   '/add-image-details-to-db',
