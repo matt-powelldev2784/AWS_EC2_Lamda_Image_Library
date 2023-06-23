@@ -22,6 +22,9 @@ app.use('/', searchImages)
 app.use('/test', (req, res) => {
   res.status(200).json({ message: 'CICD test' })
 })
+app.use('/test1', (req, res) => {
+  res.status(200).json({ message: 'CICD test' })
+})
 
 const PORT = process.env.PORT || 5001
 
