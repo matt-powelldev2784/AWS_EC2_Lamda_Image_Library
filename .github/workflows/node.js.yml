@@ -27,5 +27,7 @@ jobs:
       - run: |
           touch .env
           echo "${{ secrets.PROD_ENV_FILE }}" > .env
-      - run: pm2 delete 0
-      - run: pm2 start /home/ubuntu/ecosystem.config.js
+      - run: /home/ubuntu/.nvm/versions/node/v20.3.1/bin/pm2 delete 0
+      - run:
+          /home/ubuntu/.nvm/versions/node/v20.3.1/bin/pm2 start
+          /home/ubuntu/ecosystem.config.js
