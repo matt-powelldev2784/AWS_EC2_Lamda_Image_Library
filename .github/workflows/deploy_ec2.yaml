@@ -27,7 +27,7 @@ jobs:
         with:
           switches: -avzr --delete
           path: ./*
-          remote_path: /aws_image_hosting/
+          remote_path: /home/ubuntu/aws_image_hosting
           remote_host: ec2-52-56-219-114.eu-west-2.compute.amazonaws.com
           remote_user: ubuntu
           remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'
