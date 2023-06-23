@@ -1,0 +1,33 @@
+name: CICD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    if: github.ref == 'refs/heads/main'
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: npm ci
+
+      - name: Create .env file
+        run: echo "mongoURI=${{ secrets.MONGO_URI }}" > .env
+
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@5.1
+        with:
+          switches: -avzr --delete
+          path: ./*
+          remote_path: /aws_image_hosting/
+          remote_host: ec2-52-56-219-114.eu-west-2.compute.amazonaws.com
+          remote_user: ubuntu
+          remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'
