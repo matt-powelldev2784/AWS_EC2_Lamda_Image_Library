@@ -5,6 +5,7 @@ import { connectDB } from './config/connectDb.mjs'
 import { addImage } from './routes/add-image-details-to-db.mjs'
 import { getPresignedUrl } from './routes/get-presigned-url.mjs'
 import { searchImages } from './routes/search-images.mjs'
+import { findImageByDbId } from './routes/get-image-by-db-id.mjs'
 
 dotenv.config()
 
@@ -19,6 +20,8 @@ app.options('*', cors())
 app.use('/', addImage)
 app.use('/', getPresignedUrl)
 app.use('/', searchImages)
+app.use('/', findImageByDbId)
+
 app.use('/test2', (req, res) => {
   return res.status(200).json({ message: 'CICD test' })
 })
