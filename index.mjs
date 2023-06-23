@@ -19,10 +19,7 @@ app.options('*', cors())
 app.use('/', addImage)
 app.use('/', getPresignedUrl)
 app.use('/', searchImages)
-app.use('/test', (req, res) => {
-  return res.status(200).json({ message: 'CICD test' })
-})
-app.use('/test1', (req, res) => {
+app.use('/test2', (req, res) => {
   return res.status(200).json({ message: 'CICD test' })
 })
 
