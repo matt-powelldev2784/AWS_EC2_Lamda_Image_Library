@@ -20,7 +20,7 @@ app.use('/', addImage)
 app.use('/', getPresignedUrl)
 app.use('/', searchImages)
 app.use('/test', (req, res) => {
-  return res.status(200).json({ message: 'Hello World' })
+  res.status(200).json({ message: 'CICD test' })
 })
 
 const PORT = process.env.PORT || 5001
