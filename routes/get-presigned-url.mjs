@@ -4,7 +4,7 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { randomBytes } from 'crypto'
 
 const generateImageId = () => {
-  return Date.now().toString() + randomBytes(16).toString('hex')
+  return Date.now().toString() + randomBytes(16).toString('hex') + '.jpg'
 }
 const router = Router()
 
