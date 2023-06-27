@@ -10,6 +10,12 @@ Secure pre-signed URL's are provided to upload the images directly to AWS S3 to
 minimize server load.  
 CICD implemented using Github actions.
 
+Front End React Client:
+https://github.com/matt-powelldev2784/AWS_Image_Library_Client
+
+Client Website:
+http://aws-image-hosting-client.s3-website.eu-west-2.amazonaws.com
+
 ## How To Get Presigned URL For Upload Image
 
 Perform a get request to:  
