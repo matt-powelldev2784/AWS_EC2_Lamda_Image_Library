@@ -1,6 +1,6 @@
 # NodeJs Image Library Server
 
-Node JS API Server built to enable a front end to serve an image library.  
+NodeJS API Server built to enable a front end to serve an image library.  
 Built with:  
 NodeJS, Express and MongoDB.  
 Server is deployed in an AWS EC2 Instance.  
