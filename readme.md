@@ -2,7 +2,7 @@
 
 Node JS API Server built to enable a front end to serve an image library.  
 Built with:  
-Node, Express and MongoDB.  
+NodeJS, Express and MongoDB.  
 Server is deployed in an AWS EC2 Instance.  
 Images are hosted in an AWS S3 Bucket.  
 Image thumbnail generation is facilitated by an AWS Lambda function.  
